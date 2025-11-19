@@ -29,4 +29,17 @@ def operacao_amorzinho_para_de_trabalhar():
 
     pyautogui.click(BOTAO_PESQUISAR) # Clica no botão pesquisar
 
+def main():
+    operacao_amorzinho_para_de_trabalhar()
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\nAutomation interrupted by user")
+    except Exception as e:
+        print(f"Error: {e}")
+        import traceback
+        traceback.print_exc()
+
 
